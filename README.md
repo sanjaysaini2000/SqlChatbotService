@@ -72,11 +72,9 @@ GOOGLE_API_KEY=your_actual_api_key_from_google_ai_studio
 GOOGLE_MODEL_ID=gemini-1.5-flash
 ```
 
-**Important:** Never commit the `.env` file to version control as it contains sensitive credentials. The `.gitignore` file already excludes it.
-
 ### 3. Database Initialization
 
-The Shoppy database (`shoppy1.db`) is **automatically created and seeded on first run**:
+The Shoppy database (`shoppy.db`) is **automatically created and seeded on first run**:
 
 ```bash
 dotnet run
@@ -104,7 +102,7 @@ The connection string is configured in `appsettings.json`:
 
 ```json
 "Database": {
-  "ConnectionString": "Data Source=shoppy1.db"
+  "ConnectionString": "Data Source=shoppy.db"
 }
 ```
 
@@ -139,7 +137,7 @@ dotnet run --configuration Release
 Interactive API documentation is available at:
 
 ```
-http://localhost:5270/swagger/ui
+http://localhost:5270/swagger
 ```
 
 You can test all endpoints directly from the Swagger interface.
@@ -277,13 +275,13 @@ Configured in `appsettings.json`:
 - Restart the application after editing `.env`
 
 ### "Database connection failed"
-- Check that `shoppy1.db` is in the project directory
+- Check that `shoppy.db` is in the project directory
 - Ensure the application has write permissions
 - Verify the connection string in `appsettings.json`
 
 ### "404 Not Found on Swagger"
 - Verify the application is running and listening on `http://localhost:5270`
-- Try accessing `http://localhost:5270/swagger/ui`
+- Try accessing `http://localhost:5270/swagger`
 - Check browser console for network errors
 
 ### Build or Runtime Errors
