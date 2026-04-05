@@ -1,0 +1,6 @@
+@SqlChatbotService_HostAddress = http://localhost:5270
+
+GET {{SqlChatbotService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
